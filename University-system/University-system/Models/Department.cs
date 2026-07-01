@@ -31,5 +31,7 @@ namespace University_system.Models
 
         public Instructor Instructor { get; set; } // navigation (Relationship) property to Instructor entity
 
+        public ICollection<Course> Courses { get; set; } // navigation (Relationship) property to Course entity
+
     }
 }

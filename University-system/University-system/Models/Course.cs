@@ -39,5 +39,7 @@ namespace University_system.Models
         [Required] //not null
         [MaxLength(20)] //max length
         public string semesterOffered { get; set; } 
+
+        public Department Department { get; set; } //navigation property
     }
 }
