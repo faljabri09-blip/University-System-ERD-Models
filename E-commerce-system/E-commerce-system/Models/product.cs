@@ -47,5 +47,7 @@ namespace E_commerce_system.Models
         public ICollection<Order> Orders { get; set; } // Navigation property for related orders
 
         public category category { get; set; } // Navigation property for related category
+
+        public Review Review { get; set; } // Navigation property for related review
     }
 }

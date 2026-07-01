@@ -33,5 +33,7 @@ namespace E_commerce_system.Models
 
         [Required]
         public DateTime reviewDate { get; set; } = DateTime.Now; // Timestamp of when the review was created
+
+        public product product { get; set; } // Navigation property for related product
     }
 }
