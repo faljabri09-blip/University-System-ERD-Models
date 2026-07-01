@@ -31,5 +31,7 @@ namespace University_system.Models
         [Required]
         [MaxLength(20)]
         public string status { get; set; } = "In Progress"; //default value
+
+       public Student Student { get; set; } //navigation property
     }
 }
