@@ -29,5 +29,7 @@ namespace University_system.Models
         [ForeignKey("Instructor")] // foreign key to Instructor entity
         public int ? headOfInstructorId { get; set; } //nullable (department may not have a head yet)
 
+        public Instructor Instructor { get; set; } // navigation (Relationship) property to Instructor entity
+
     }
 }

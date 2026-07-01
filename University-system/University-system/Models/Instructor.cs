@@ -38,5 +38,7 @@ namespace University_system.Models
         [Required]
         [MaxLength(50)] // Limits the length of the academic title to 50 characters
         public string academicTitle { get; set; }
+
+        public Department Department { get; set; } // navigation (Relationship) property to Department entity
     }
 }
