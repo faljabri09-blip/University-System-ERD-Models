@@ -37,5 +37,7 @@ namespace E_commerce_system.Models
         [Required]
         [MaxLength(50)]
         public string paymentMethod { get; set; } 
+
+        public ICollection<product> Products { get; set; } // Navigation property for related products
     }
 }

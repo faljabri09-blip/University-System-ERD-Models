@@ -43,5 +43,7 @@ namespace E_commerce_system.Models
         public bool isAvailable { get; set; } = true; //default value true
 
         public User User { get; set; } // Navigation property for related user
+
+        public ICollection<Order> Orders { get; set; } // Navigation property for related orders
     }
 }
