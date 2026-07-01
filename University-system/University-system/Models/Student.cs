@@ -41,5 +41,7 @@ namespace University_system.Models
         [Range(0.0, 4.0)]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)] // default value
         public decimal gpa { get; set; } 
+
+        public ICollection<Course> Courses { get; set; } //navigation property
     }
 }

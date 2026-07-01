@@ -43,5 +43,7 @@ namespace University_system.Models
         public Department Department { get; set; } //navigation property
 
         public Instructor Instructor { get; set; } //navigation property
+
+        public ICollection<Student> Students { get; set; } //navigation property
     }
 }
