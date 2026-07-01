@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\university-system\\university-system\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|solutionrelative:university-system\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\university-system\\university-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|solutionrelative:university-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "University-system\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Models\\Student.cs",
+              "RelativeToolTip": "University-system\\Models\\Student.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA0wCYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T05:08:49.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Program.cs",
+              "RelativeDocumentMoniker": "University-system\\Program.cs",
+              "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Program.cs",
+              "RelativeToolTip": "University-system\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-01T04:37:57.434Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
