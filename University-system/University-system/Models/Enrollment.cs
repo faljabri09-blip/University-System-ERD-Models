@@ -33,5 +33,7 @@ namespace University_system.Models
         public string status { get; set; } = "In Progress"; //default value
 
        public Student Student { get; set; } //navigation property
+
+        public Course Course { get; set; } //navigation property
     }
 }
