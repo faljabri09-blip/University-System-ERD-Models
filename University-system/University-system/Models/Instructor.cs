@@ -40,5 +40,7 @@ namespace University_system.Models
         public string academicTitle { get; set; }
 
         public Department Department { get; set; } // navigation (Relationship) property to Department entity
+
+        public ICollection<Instructor> Instructors { get; set; } // navigation (Relationship) property
     }
 }

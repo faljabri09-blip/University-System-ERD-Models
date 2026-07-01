@@ -41,5 +41,7 @@ namespace University_system.Models
         public string semesterOffered { get; set; } 
 
         public Department Department { get; set; } //navigation property
+
+        public Instructor Instructor { get; set; } //navigation property
     }
 }
