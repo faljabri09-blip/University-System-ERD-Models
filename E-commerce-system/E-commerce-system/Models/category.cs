@@ -25,5 +25,7 @@ namespace E_commerce_system.Models
 
         [MaxLength(300)] // max length
         public string ? imageUrl { get; set; } // optional
+
+        public ICollection<product> Products { get; set; } // Navigation property for related products
     }
 }

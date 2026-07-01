@@ -45,5 +45,7 @@ namespace E_commerce_system.Models
         public User User { get; set; } // Navigation property for related user
 
         public ICollection<Order> Orders { get; set; } // Navigation property for related orders
+
+        public category category { get; set; } // Navigation property for related category
     }
 }
