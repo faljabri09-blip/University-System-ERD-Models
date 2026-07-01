@@ -13,7 +13,9 @@ namespace University_system.Models
 
     public class Student
     {
-        [Key]
+        [Key] //primary key
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // auto generated
+        [Required] //not null
         public int stusentId { get; set; }
 
         [Required]
@@ -26,7 +28,7 @@ namespace University_system.Models
         public string email { get; set; }
 
         [MaxLength(20)]
-        public string phoneNumber { get; set; }
+        public string ? phoneNumber { get; set; } // optional 
 
         [Required]
         public DateTime dateOfBirth { get; set; }
