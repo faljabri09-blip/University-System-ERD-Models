@@ -41,5 +41,7 @@ namespace E_commerce_system.Models
         public DateTime createAt { get; set; }
 
         public bool isAvailable { get; set; } = true; //default value true
+
+        public User User { get; set; } // Navigation property for related user
     }
 }
