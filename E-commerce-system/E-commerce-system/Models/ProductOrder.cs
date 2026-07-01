@@ -22,6 +22,7 @@ namespace E_commerce_system.Models
         public int productId { get; set; } // Foreign key to Product
 
         [Required] // Not null
+        [Range(1, 999)] // Quantity should be between 1 and 999
         public int quantity { get; set; } // Quantity of the product in the order
 
         public Order Order { get; set; } // Navigation property for related order
