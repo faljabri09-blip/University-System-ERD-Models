@@ -46,5 +46,7 @@ namespace E_commerce_system.Models
         public bool isActive { get; set; } = true;
 
         public ICollection<Order> Orders { get; set; } // Navigation property for related orders
+
+        public ICollection<Review> Reviews { get; set; } // Navigation property for related reviews
     }
 }
