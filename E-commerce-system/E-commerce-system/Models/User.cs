@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace E_commerce_system.Models
+{
+    public class User
+    {
+        [Key] // Primary key
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto generated
+        [Required] // Not null
+        public int userId { get; set; }
+
+        [Required] // Not null
+        //[Index(IsUniqu = true)] // Unique
+        [MaxLength(50)] // Max length
+        public string userName { get; set; }
+
+        [Required] // Not null
+        //[Index(IsUniqu = true)] // Unique
+        [MaxLength(150)] // Max length
+        public string email { get; set; }
+
+        [Required] // Not null
+        [MaxLength(265)] // Max length
+        public string passwordHash { get; set; }
+
+        [Required] // Not null
+        [MaxLength(100)] // Max length
+
+        public string fullName { get; set; }
+
+        [MaxLength(20)]
+        public string ? phoneNumber { get; set; } //optional
+
+        [MaxLength(300)]
+        public string ? address { get; set; } //optional
+
+        [Required]
+        public DateTime ? registrationDate { get; set; } = DateTime.Now;
+
+        public bool isActive { get; set; } = true;
+    }
+}
