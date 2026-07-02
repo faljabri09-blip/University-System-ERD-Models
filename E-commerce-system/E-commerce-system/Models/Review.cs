@@ -10,9 +10,8 @@ namespace E_commerce_system.Models
 {
     public class Review
     {
-        [Key]
+        [Key] //primary key && not null 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Required]
         public int reviewId { get; set; }
 
         [ForeignKey("User")] // Foreign key to the User table

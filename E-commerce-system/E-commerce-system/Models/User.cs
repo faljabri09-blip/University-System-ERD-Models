@@ -10,9 +10,8 @@ namespace E_commerce_system.Models
 {
     public class User
     {
-        [Key] // Primary key
+        [Key] // Primary key && not null 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto generated
-        [Required] // Not null
         public int userId { get; set; }
 
         [Required] // Not null

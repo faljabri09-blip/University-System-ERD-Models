@@ -10,9 +10,8 @@ namespace E_commerce_system.Models
 {
     public class product
     {
-        [Key] // Primary key
+        [Key] // Primary key && not null 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto generated
-        [Required] // Not null
         public int productId { get; set; }
 
         [Required] // Not null
@@ -23,11 +22,11 @@ namespace E_commerce_system.Models
         public string ? description { get; set; } //optional
 
         [Required] // Not null
-        [Range(typeof (decimal) , "0.01" , "9999.999", ErrorMessage = "Price must be greater than 0")] // Price must be greater than 0
+        [Range(0.01 , double.MaxValue)] // Price must be greater than 0
         public decimal price { get; set; }
 
         [Required] // Not null
-        [Range(0, int.MaxValue, ErrorMessage = "Value must be greater than or equal to 0")]
+        [Range(0, int.MaxValue)]
         public int stockQuantity { get; set; } = 0; // Stock quantity //default value 0
 
         [MaxLength(300)] // Max length 300 (max length of a URL)

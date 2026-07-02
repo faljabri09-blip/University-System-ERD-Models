@@ -10,9 +10,8 @@ namespace E_commerce_system.Models
 {
     public class Order
     {
-        [Key] // Primary key 
+        [Key] // Primary key && not null 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto generated
-        [Required] // Not null
         public int orderId { get; set; }
 
         [ForeignKey("User")] // Foreign key to User
@@ -23,7 +22,7 @@ namespace E_commerce_system.Models
         public DateTime orderDate { get; set; } // Date of the order
 
         [Required]
-        [Range(0, int.MaxValue, ErrorMessage = "Value must be greater than or equal to 0")]
+        [Range(0.01, double.MaxValue)]
         public decimal totalAmount { get; set; } // Total amount of the order
 
         [Required]

@@ -10,9 +10,8 @@ namespace E_commerce_system.Models
 {
     public class category
     {
-        [Key] // primary key
+        [Key] // primary key && not null 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // auto generated
-        [Required] // not null
         public int categoryId { get; set; }
 
         [Required] // not null

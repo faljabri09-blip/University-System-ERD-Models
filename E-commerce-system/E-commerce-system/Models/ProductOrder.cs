@@ -10,8 +10,7 @@ namespace E_commerce_system.Models
 {
     public class ProductOrder
     {
-        [Key] // Primary key
-        [Required] // Not null
+        [Key] // Primary key && not nu
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto generated
         public int productOrderId { get; set; } // Foreign key to Product
 
