@@ -35,8 +35,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-01T04:37:57.434Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -46,7 +45,7 @@
               "RelativeDocumentMoniker": "University-system\\Models\\Enrollment.cs",
               "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Models\\Enrollment.cs",
               "RelativeToolTip": "University-system\\Models\\Enrollment.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwCQAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwCQAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-01T08:59:32.455Z",
               "EditorCaption": ""
@@ -61,8 +60,7 @@
               "RelativeToolTip": "University-system\\Models\\Course.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAkwDAAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:59:31.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:59:31.366Z"
             }
           ]
         }

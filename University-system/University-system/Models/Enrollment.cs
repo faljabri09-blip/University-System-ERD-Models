@@ -9,9 +9,8 @@ namespace University_system.Models
 {
     public class Enrollment
     {
-        [Key] //primary key
+        [Key] //primary key && not null
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //auto generated
-        [Required] //not null
         public int EnrollmentId { get; set; }
 
         [ForeignKey("Student")] //foreign key

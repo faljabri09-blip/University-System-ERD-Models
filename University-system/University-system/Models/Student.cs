@@ -13,9 +13,8 @@ namespace University_system.Models
 
     public class Student
     {
-        [Key] //primary key
+        [Key] //primary key && not null
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // auto generated
-        [Required] //not null
         public int stusentId { get; set; }
 
         [Required]
@@ -39,8 +38,7 @@ namespace University_system.Models
 
 
         [Range(0.0, 4.0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)] // default value
-        public decimal gpa { get; set; } 
+        public decimal gpa { get; set; } = 0.0m; // default value
 
         public ICollection<Course> Courses { get; set; } //navigation property
 

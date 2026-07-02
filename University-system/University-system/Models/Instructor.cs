@@ -10,8 +10,7 @@ namespace University_system.Models
 {
     public class Instructor
     {
-        [Key] // Primary key for the Instructor entity
-        [Required] // Ensures that the instructorId is not null
+        [Key] // Primary key && not null
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // auto generated
         public int instructorId { get; set; }
 
@@ -31,7 +30,7 @@ namespace University_system.Models
         public DateTime hireDate { get; set; }
 
         [Required]
-        [Range(typeof(decimal), "0.01", "9999" , ErrorMessage = "Salary must be greater than 0")]
+        [Range(0.01 , double.MaxValue)] // salary must be greater than 0
         public decimal salary { get; set; }
 
 

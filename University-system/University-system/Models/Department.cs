@@ -10,8 +10,7 @@ namespace University_system.Models
 {
     public class Department
     {
-        [Key] // primary key
-        [Required] // not null
+        [Key] // primary key && not null
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // auto generated
         public int departmentId { get; set; }
 
@@ -23,7 +22,7 @@ namespace University_system.Models
         public string ? building { get; set; }
 
         [Required]
-        [Range(typeof (decimal) , "0.01" , "99999.99" , ErrorMessage = "Salary must be greater than 0")] // budget must be greater than 0
+        [Range(0.01 , double.MaxValue)] // budget must be greater than 0
         public decimal budget { get; set; }
 
         [ForeignKey("Instructor")] // foreign key to Instructor entity

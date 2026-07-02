@@ -10,9 +10,8 @@ namespace University_system.Models
 {
     public class Course
     {
-        [Key] //primary key
+        [Key] //primary key && not null
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //auto generated
-        [Required] //not null
         public int courseId { get; set; }
 
         [Required] //not null
