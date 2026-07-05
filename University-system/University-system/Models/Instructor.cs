@@ -31,7 +31,7 @@ namespace University_system.Models
 
         [Required]
         [Range(0.01 , double.MaxValue)] // salary must be greater than 0
-        public decimal salary { get; set; }
+        public decimal InstructorSalary { get; set; }
 
 
         [Required]

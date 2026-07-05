@@ -31,8 +31,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-01T10:57:12.163Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -42,10 +41,9 @@
               "RelativeDocumentMoniker": "E-commerce-system\\Models\\product.cs",
               "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Models\\product.cs",
               "RelativeToolTip": "E-commerce-system\\Models\\product.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwAwAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T12:10:31.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T12:10:31.889Z"
             }
           ]
         }
