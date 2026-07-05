@@ -14,6 +14,7 @@ namespace E_commerce_system.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto generated
         public int productId { get; set; }
 
+
         [Required] // Not null
         [MaxLength(150)] // Max length 150 
         public string productName { get; set; }
@@ -43,10 +44,9 @@ namespace E_commerce_system.Models
 
         public User User { get; set; } // Navigation property for related user
 
-        public ICollection<Order> Orders { get; set; } // Navigation property for related orders
-
+        public ICollection<ProductOrder> ProductOrders { get; set; }
         public category category { get; set; } // Navigation property for related category
 
-        public Review Review { get; set; } // Navigation property for related review
+        public List<Review > Reviews { get; set; } // Navigation property for related review
     }
 }

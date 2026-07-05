@@ -14,6 +14,7 @@ namespace E_commerce_system.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto generated
         public int orderId { get; set; }
 
+
         [ForeignKey("User")] // Foreign key to User
         [Required] // Not null
         public int userId { get; set; } // Foreign key to User
@@ -35,8 +36,10 @@ namespace E_commerce_system.Models
 
         [Required]
         [MaxLength(50)]
-        public string paymentMethod { get; set; } 
+        public string paymentMethod { get; set; }
 
-        public ICollection<product> Products { get; set; } // Navigation property for related products
+        public User User { get; set; }// Navigation property 
+        public ICollection<ProductOrder> ProductOrders { get; set; } 
+
     }
 }

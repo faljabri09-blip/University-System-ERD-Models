@@ -15,16 +15,22 @@ namespace E_commerce_system.Models
         public int productOrderId { get; set; } // Foreign key to Product
 
         [ForeignKey("Order")] // Foreign key to Order
+        [Required]
         public int orderId { get; set; } // Foreign key to Order
+        public Order Order { get; set; } // Navigation property for related order
+
 
         [ForeignKey("Product")] // Foreign key to Product
+        [Required]
         public int productId { get; set; } // Foreign key to Product
+        public product Product { get; set; } // Navigation property for related product
 
         [Required] // Not null
         [Range(1, 999)] // Quantity should be between 1 and 999
         public int quantity { get; set; } // Quantity of the product in the order
 
-        public Order Order { get; set; } // Navigation property for related order
-        public product Product { get; set; } // Navigation property for related product
+
+       
+       
     }
 }

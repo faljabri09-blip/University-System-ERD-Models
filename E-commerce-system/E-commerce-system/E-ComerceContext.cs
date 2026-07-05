@@ -16,12 +16,14 @@ namespace E_commerce_system
         public DbSet<User> Users { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<ProductOrder> ProductOrders { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer("Server=localhost;Database=E_commerce;Trusted_Connection=True; TrustServerCertificate=True");
         }
+
     }
 
     
