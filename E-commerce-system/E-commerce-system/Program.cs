@@ -1,7 +1,9 @@
 ﻿namespace E_commerce_system
 {
-    internal class Program
+    public class Program
     {
+
+        public E_ComerceContext context  = new E_ComerceContext();
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");

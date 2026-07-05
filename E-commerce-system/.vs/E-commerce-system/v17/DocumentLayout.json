@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\e-commerce-system\\e-commerce-system\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|solutionrelative:e-commerce-system\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\e-commerce-system\\e-commerce-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|solutionrelative:e-commerce-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\e-commerce-system\\e-commerce-system\\e-comercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|solutionrelative:e-commerce-system\\e-comercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\e-commerce-system\\e-commerce-system\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|solutionrelative:e-commerce-system\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +22,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Program.cs",
               "RelativeDocumentMoniker": "E-commerce-system\\Program.cs",
               "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Program.cs",
               "RelativeToolTip": "E-commerce-system\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-01T10:57:12.163Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "E-ComerceContext.cs",
+              "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\E-ComerceContext.cs",
+              "RelativeDocumentMoniker": "E-commerce-system\\E-ComerceContext.cs",
+              "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\E-ComerceContext.cs",
+              "RelativeToolTip": "E-commerce-system\\E-ComerceContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-05T09:54:31.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "product.cs",
               "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Models\\product.cs",
               "RelativeDocumentMoniker": "E-commerce-system\\Models\\product.cs",
@@ -43,7 +61,8 @@
               "RelativeToolTip": "E-commerce-system\\Models\\product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T12:10:31.889Z"
+              "WhenOpened": "2026-07-01T12:10:31.889Z",
+              "EditorCaption": ""
             }
           ]
         }

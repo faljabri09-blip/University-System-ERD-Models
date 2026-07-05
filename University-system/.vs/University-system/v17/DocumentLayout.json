@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Migrations\\20260705084221_editInstructorSalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:University-system\\Migrations\\20260705084221_editInstructorSalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\university-system\\university-system\\e-comercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|solutionrelative:university-system\\e-comercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\university-system\\university-system\\migrations\\20260705084221_editinstructorsalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|solutionrelative:university-system\\migrations\\20260705084221_editinstructorsalary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\university-system\\university-system\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +23,12 @@
       "RelativeMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|solutionrelative:university-system\\migrations\\20260705080013_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Migrations\\20260705080013_initialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:University-system\\Migrations\\20260705080013_initialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\university-system\\university-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|solutionrelative:university-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\university-system\\university-system\\e-comercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|solutionrelative:university-system\\e-comercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\university-system\\university-system\\migrations\\20260705080013_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D68E7A2-3D84-4DF0-AC2A-2BD6E15F19EC}|University-system\\University-system.csproj|solutionrelative:university-system\\migrations\\20260705080013_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -51,12 +51,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-01T04:37:57.434Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "20260705084221_editInstructorSalary.cs",
               "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Migrations\\20260705084221_editInstructorSalary.cs",
               "RelativeDocumentMoniker": "University-system\\Migrations\\20260705084221_editInstructorSalary.cs",
@@ -69,20 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Instructor.cs",
-              "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Models\\Instructor.cs",
-              "RelativeDocumentMoniker": "University-system\\Models\\Instructor.cs",
-              "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Models\\Instructor.cs",
-              "RelativeToolTip": "University-system\\Models\\Instructor.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T08:16:42.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "20260705080013_initialCreate.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Migrations\\20260705080013_initialCreate.Designer.cs",
               "RelativeDocumentMoniker": "University-system\\Migrations\\20260705080013_initialCreate.Designer.cs",
@@ -90,12 +76,11 @@
               "RelativeToolTip": "University-system\\Migrations\\20260705080013_initialCreate.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T08:07:03.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T08:07:03.415Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "E_comerceContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Migrations\\E_comerceContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "University-system\\Migrations\\E_comerceContextModelSnapshot.cs",
@@ -103,12 +88,11 @@
               "RelativeToolTip": "University-system\\Migrations\\E_comerceContextModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T08:06:54.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T08:06:54.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "20260705080013_initialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Migrations\\20260705080013_initialCreate.cs",
               "RelativeDocumentMoniker": "University-system\\Migrations\\20260705080013_initialCreate.cs",
@@ -116,21 +100,32 @@
               "RelativeToolTip": "University-system\\Migrations\\20260705080013_initialCreate.cs",
               "ViewState": "AgIAAM0AAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T08:00:14.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T08:00:14.073Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "E-comerceContext.cs",
               "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\E-comerceContext.cs",
               "RelativeDocumentMoniker": "University-system\\E-comerceContext.cs",
               "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\E-comerceContext.cs",
               "RelativeToolTip": "University-system\\E-comerceContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA0wAoAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-05T07:02:17.856Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Instructor.cs",
+              "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Models\\Instructor.cs",
+              "RelativeDocumentMoniker": "University-system\\Models\\Instructor.cs",
+              "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\University-system\\University-system\\Models\\Instructor.cs",
+              "RelativeToolTip": "University-system\\Models\\Instructor.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-05T08:16:42.486Z"
             }
           ]
         }
