@@ -18,7 +18,7 @@ namespace E_commerce_system.Models
         [Required]
         public int userId { get; set; }
 
-        [ForeignKey("Product")] // Foreign key to the Product table
+        [ForeignKey("product")] // Foreign key to the Product table
         [Required]
         public int productId { get; set; }
 
@@ -34,7 +34,9 @@ namespace E_commerce_system.Models
         public DateTime reviewDate { get; set; } = DateTime.Now; // Timestamp of when the review was created
 
         public product product { get; set; } // Navigation property for related product
-
         public User user { get; set; } // Navigation property for related user
+
     }
+
+
 }

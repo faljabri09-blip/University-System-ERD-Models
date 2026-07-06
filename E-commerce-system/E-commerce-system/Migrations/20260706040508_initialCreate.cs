@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace E_commerce_system.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class initialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -107,7 +107,7 @@ namespace E_commerce_system.Migrations
                 name: "ProductOrders",
                 columns: table => new
                 {
-                    productOrderId = table.Column<int>(type: "int", nullable: false)
+                    ProductOrderId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     orderId = table.Column<int>(type: "int", nullable: false),
                     productId = table.Column<int>(type: "int", nullable: false),
@@ -115,17 +115,19 @@ namespace E_commerce_system.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductOrders", x => x.productOrderId);
+                    table.PrimaryKey("PK_ProductOrders", x => x.ProductOrderId);
                     table.ForeignKey(
                         name: "FK_ProductOrders_Orders_orderId",
                         column: x => x.orderId,
                         principalTable: "Orders",
-                        principalColumn: "orderId");
+                        principalColumn: "orderId",
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_ProductOrders_Products_productId",
                         column: x => x.productId,
                         principalTable: "Products",
-                        principalColumn: "productId");
+                        principalColumn: "productId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -154,7 +156,7 @@ namespace E_commerce_system.Migrations
                         column: x => x.userId,
                         principalTable: "Users",
                         principalColumn: "userId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(

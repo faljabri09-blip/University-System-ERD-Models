@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_commerce_system.Migrations
 {
     [DbContext(typeof(E_ComerceContext))]
-    [Migration("20260705111822_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260706040508_initialCreate")]
+    partial class initialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,11 +65,11 @@ namespace E_commerce_system.Migrations
 
             modelBuilder.Entity("E_commerce_system.Models.ProductOrder", b =>
                 {
-                    b.Property<int>("productOrderId")
+                    b.Property<int>("ProductOrderId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("productOrderId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductOrderId"));
 
                     b.Property<int>("orderId")
                         .HasColumnType("int");
@@ -80,7 +80,7 @@ namespace E_commerce_system.Migrations
                     b.Property<int>("quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("productOrderId");
+                    b.HasKey("ProductOrderId");
 
                     b.HasIndex("orderId");
 
@@ -260,18 +260,18 @@ namespace E_commerce_system.Migrations
                     b.HasOne("E_commerce_system.Models.Order", "Order")
                         .WithMany("ProductOrders")
                         .HasForeignKey("orderId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("E_commerce_system.Models.product", "Product")
+                    b.HasOne("E_commerce_system.Models.product", "product")
                         .WithMany("ProductOrders")
                         .HasForeignKey("productId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Order");
 
-                    b.Navigation("Product");
+                    b.Navigation("product");
                 });
 
             modelBuilder.Entity("E_commerce_system.Models.Review", b =>

@@ -12,7 +12,7 @@ namespace E_commerce_system.Models
     {
         [Key] // Primary key && not nu
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto generated
-        public int productOrderId { get; set; } // Foreign key to Product
+        public int ProductOrderId { get; set; } // Foreign key to Product
 
         [ForeignKey("Order")] // Foreign key to Order
         [Required]
@@ -20,10 +20,10 @@ namespace E_commerce_system.Models
         public Order Order { get; set; } // Navigation property for related order
 
 
-        [ForeignKey("Product")] // Foreign key to Product
+        [ForeignKey("product")] // Foreign key to Product
         [Required]
         public int productId { get; set; } // Foreign key to Product
-        public product Product { get; set; } // Navigation property for related product
+        public product product { get; set; } // Navigation property for related product
 
         [Required] // Not null
         [Range(1, 999)] // Quantity should be between 1 and 999
