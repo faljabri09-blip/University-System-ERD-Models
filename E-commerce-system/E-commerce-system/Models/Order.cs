@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace E_commerce_system.Models
+namespace ECommerce_Solution.Models
 {
     [Table("Orders")] // Table name in the database
     public class Order

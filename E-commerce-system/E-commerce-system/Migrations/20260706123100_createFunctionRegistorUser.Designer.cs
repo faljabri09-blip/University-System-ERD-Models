@@ -4,6 +4,7 @@ using ECommerce_Solution;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_commerce_system.Migrations
 {
     [DbContext(typeof(E_ComerceContext))]
-    partial class E_ComerceContextModelSnapshot : ModelSnapshot
+    [Migration("20260706123100_createFunctionRegistorUser")]
+    partial class createFunctionRegistorUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

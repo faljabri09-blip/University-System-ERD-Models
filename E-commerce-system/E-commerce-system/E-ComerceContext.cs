@@ -1,12 +1,12 @@
-﻿using E_commerce_system.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using ECommerce_Solution.Models;
 
-namespace E_commerce_system
+namespace ECommerce_Solution
 {
     public class E_ComerceContext : DbContext
     {
