@@ -10,41 +10,55 @@ namespace ECommerce_Solution
 
         public static void RegisterNewUser(DbSet<User> users)
         {
-            Console.WriteLine("Registering a new user...");
+            //Console.WriteLine("Registering a new user...");
 
-            Console.Write("Enter username: ");
-            string userName = Console.ReadLine();
+            //Console.Write("Enter username: ");
+            //string userName = Console.ReadLine();
 
-            Console.Write("Enter email: ");
-            string email = Console.ReadLine();
+            //Console.Write("Enter email: ");
+            //string email = Console.ReadLine();
 
-            Console.Write("Enter password: ");
-            string password = Console.ReadLine();
+            //Console.Write("Enter password: ");
+            //string password = Console.ReadLine();
 
-            Console.Write("Enter full name: ");
-            string fullName = Console.ReadLine();
+            //Console.Write("Enter full name: ");
+            //string fullName = Console.ReadLine();
 
-            Console.Write("Enter phone number (optional): ");
-            string phoneNumber = Console.ReadLine();
+            //Console.Write("Enter phone number (optional): ");
+            //string phoneNumber = Console.ReadLine();
 
-            Console.Write("Enter address (optional): ");
-            string address = Console.ReadLine();
+            //Console.Write("Enter address (optional): ");
+            //string address = Console.ReadLine();
 
             int userId = context.Users.Count() + 1; // Generate a new userId 
 
-            context.Users.Add(new User
+            //context.Users.Add(new User
 
+            //{
+            //    userName = userName,
+            //    email = email,
+            //    passwordHash = password, // In a real application, you should hash the password
+            //    fullName = fullName,
+            //    phoneNumber = string.IsNullOrWhiteSpace(phoneNumber) ? null : phoneNumber,
+            //    address = string.IsNullOrWhiteSpace(address) ? null : address,
+            //    registrationDate = DateTime.Now,
+            //    isActive = true
+            //});
+
+
+            //insert a new user with hardcoded values for testing purposes
+
+            User newUser = new User
             {
-                userName = userName,
-                email = email,
-                passwordHash = password, // In a real application, you should hash the password
-                fullName = fullName,
-                phoneNumber = string.IsNullOrWhiteSpace(phoneNumber) ? null : phoneNumber,
-                address = string.IsNullOrWhiteSpace(address) ? null : address,
+                userName = "Fatma_Aljabri",
+                email = "fatma@example.com",
+                passwordHash = "hashed_password_here",
+                fullName = "Fatma ALjabri",
                 registrationDate = DateTime.Now,
                 isActive = true
-            });
+            };
 
+            context.Users.Add(newUser);
             context.SaveChanges();
 
             Console.WriteLine($"User registered successfully. UserId : {userId}");
