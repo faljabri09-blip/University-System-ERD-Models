@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace E_commerce_system.Models
 {
+    [Table("Categories")]
     public class category
     {
         [Key] // primary key && not null 

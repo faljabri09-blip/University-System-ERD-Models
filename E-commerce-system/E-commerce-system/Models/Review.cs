@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace E_commerce_system.Models
 {
+    [Table("Reviews")] // Specify the table name in the database
     public class Review
     {
         [Key] //primary key && not null 
