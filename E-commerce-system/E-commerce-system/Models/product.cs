@@ -24,7 +24,7 @@ namespace E_commerce_system.Models
 
         [Required] // Not null
         [Range(0.01 , double.MaxValue)] // Price must be greater than 0
-        public decimal price { get; set; }
+        public decimal ProductPrice { get; set; }
 
         [Required] // Not null
         [Range(0, int.MaxValue)]
