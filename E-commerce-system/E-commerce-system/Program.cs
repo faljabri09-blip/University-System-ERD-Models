@@ -246,32 +246,6 @@ namespace ECommerce_Solution
             Console.WriteLine($"Adding Review successfully , review id: {NewReview.reviewId}");
         }
 
-        public static void FilterProductByCategoryAndPriceRange(E_ComerceContext context)
-        {
-            Console.WriteLine("********** Filter Product By Category And Price Range **********");
-
-            Console.WriteLine("Enter the category Id");
-            int categoryId = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter the Maximum price :");
-            int maxPrice = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter the Manimum price :");
-            int minPrice = int.Parse(Console.ReadLine());
-
-            var Price = context.Products.OrderBy(p => p.ProductPrice)
-                                        .Where(p => p.categoryId == categoryId
-                                                      && p.ProductPrice >= minPrice
-                                                      && p.ProductPrice <= maxPrice).ToList();
-            if (categoryId == 0 && Price.Count <= 0)
-            {
-                Console.WriteLine("Product not found..");
-            }
-
-            Console.WriteLine($"CategoryId: {categoryId} | Maximum price :{maxPrice} | Manimum price :{minPrice}");
-
-
-        }
 
         //Update operations
         public static void UpdateProductPriceAndAvailable(DbSet<product> products)
@@ -376,7 +350,39 @@ namespace ECommerce_Solution
 
         }
 
-       
+        public static void FilterProductByCategoryAndPriceRange(E_ComerceContext context)
+        {
+            Console.WriteLine("********** Filter Product By Category And Price Range **********");
+
+            Console.WriteLine("Enter the category Id");
+            int categoryId = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the Maximum price :");
+            int maxPrice = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the Manimum price :");
+            int minPrice = int.Parse(Console.ReadLine());
+
+            var products = context.Products.Where(p => p.categoryId == categoryId
+                                                      && p.ProductPrice >= minPrice
+                                                      && p.ProductPrice <= maxPrice)
+                                           .OrderBy(p => p.ProductPrice)
+                                           .ToList();
+
+            if (!products.Any())
+            {
+                Console.WriteLine("Product not found..");
+            }
+
+            foreach (var product in context.Products)
+            {
+                Console.WriteLine($"Product id : {product.productId} | CategoryId: {product.categoryId} | Product price: {product.ProductPrice} ");
+
+            }
+
+        }
+
+
         static void Main(string[] args)
         {
             bool exit = false;
@@ -409,7 +415,7 @@ namespace ECommerce_Solution
                     case 6: CancleOrder(context); break;
                     case 7: DeleteReview(context.Reviews); break;
                     case 8: ViewAllProducts(context.Products); break;
-                    case 9: ViewAllProducts(context.Products); break;
+                    case 9: FilterProductByCategoryAndPriceRange(context); break;
                     case 13: exit = true; break;
                     default: Console.WriteLine("Invalid option. Please try again."); break;
 
