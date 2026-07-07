@@ -72,7 +72,7 @@ namespace ECommerce_Solution
             //Console.WriteLine($"User registered successfully. UserId : {saved.userId}");
         }
 
-        public static void AddNewProduct(DbSet<category> categories, DbSet<product> products)
+        public static void AddNewProduct(E_ComerceContext context)
         {
 
             //foreach (var category in context.Categories)
@@ -147,7 +147,7 @@ namespace ECommerce_Solution
                         RegisterNewUser(context.Users);
                         break;
                     case "2":
-
+                        AddNewProduct(context);
                         break;
                     case "3":
                         exit = true;
