@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ECommerce_Solution.Models;
-using System.Linq;
+﻿using ECommerce_Solution.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
+using Microsoft.Identity.Client;
+using System.Diagnostics;
+using System.Linq;
 namespace ECommerce_Solution
 {
 
@@ -245,6 +247,7 @@ namespace ECommerce_Solution
         }
 
 
+
         //update functions
         public static void UpdateProductPriceAndAvailable(DbSet<product> products)
         {
@@ -276,7 +279,43 @@ namespace ECommerce_Solution
 
 
          }
-        
+
+        public static void CancleOrder(E_ComerceContext context)
+        {
+
+            Console.WriteLine("Enter order Id :");
+            int orderId = int.Parse(Console.ReadLine());
+
+            var order = context.Orders.FirstOrDefault(o => o.orderId == orderId);
+
+            if (order == null)
+            {
+                Console.WriteLine("Order not found...");
+                return;
+            }
+
+            //Load all ProductOrders for this order
+            context.Entry(order).Collection(o => o.ProductOrders).Load();
+            
+
+            foreach (var product in order.ProductOrders)
+            {
+                var productfound = context.Products.FirstOrDefault(p => p.productId == product.productId);
+
+                if (productfound != null)
+                {
+                    productfound.stockQuantity += product.quantity;
+                }
+
+            }
+
+            order.status = "cancelled";
+            context.SaveChanges();
+
+            Console.WriteLine($"Order cancelled sucessfully, order Id : {orderId}");
+          
+        }
+
         static void Main(string[] args)
         {
             bool exit = false;
@@ -289,8 +328,9 @@ namespace ECommerce_Solution
                 Console.WriteLine("2. Add new product to a category");
                 Console.WriteLine("3. Place an order");
                 Console.WriteLine("4. Write a Product Review");
-                Console.WriteLine("4. Update Product Price And Available ");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("5. Update Product Price And Available ");
+                Console.WriteLine("6. Cancle an order ");
+                Console.WriteLine("7. Exit");
 
                 string option = Console.ReadLine();
 
@@ -301,7 +341,8 @@ namespace ECommerce_Solution
                     case "3": PlaceAnOrder(context); break;
                     case "4": WriteProductRwview(context); break;
                     case "5":UpdateProductPriceAndAvailable(context.Products); break;
-                    case "6": exit = true; break;
+                    case "6": CancleOrder(context); break;
+                    case "8": exit = true; break;
                     default: Console.WriteLine("Invalid option. Please try again."); break;
 
                 }
