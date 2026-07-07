@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ECommerce_Solution.Models;
-
+using System.Linq;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 namespace ECommerce_Solution
 {
 
@@ -127,6 +128,67 @@ namespace ECommerce_Solution
 
         }
 
+        public static void PlaceAnOrder(E_ComerceContext context)
+        {
+            Console.WriteLine("Enter User Id:");
+            int userId = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Product Id:");
+            int productId = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Quantity:");
+            int quantity = int.Parse(Console.ReadLine());
+
+            var product = context.Products.FirstOrDefault(p => p.productId == productId);
+
+            if (product == null)
+            {
+                Console.WriteLine("Product not found...");
+                return;
+            }
+
+            if (quantity > product.stockQuantity)
+            {
+                Console.WriteLine("Not enough stock.");
+                return;
+            }
+
+            Console.WriteLine("Enter Shipping Address:");
+            string shippingAddress = Console.ReadLine();
+
+            Console.WriteLine("Enter Payment Method:");
+            string paymentMethod = Console.ReadLine();
+
+            Order newOrder = new Order
+            {
+                userId = userId,
+                orderDate = DateTime.Now,
+                totalAmount = product.ProductPrice * quantity,
+                shippingAddress = shippingAddress,
+                paymentMethod = paymentMethod,
+                status = "Pending"
+            };
+
+            context.Orders.Add(newOrder);
+            context.SaveChanges(); 
+
+            ProductOrder productOrder = new ProductOrder
+            {
+                orderId = newOrder.orderId,
+                productId = productId,
+                quantity = quantity,
+                unitPrice = product.ProductPrice
+            };
+
+            context.ProductOrders.Add(productOrder);
+
+            product.stockQuantity -= quantity;
+
+            context.SaveChanges();
+
+            Console.WriteLine($"Order placed successfully. Order Id: {newOrder.orderId}");
+        }
+
         
         static void Main(string[] args)
         {
@@ -138,23 +200,18 @@ namespace ECommerce_Solution
                 Console.WriteLine("Please select an option:");
                 Console.WriteLine("1. Register a new user");
                 Console.WriteLine("2. Add new product to a category");
+                Console.WriteLine("3. Place an order");
                 Console.WriteLine("3. Exit");
                 string option = Console.ReadLine();
 
                 switch (option)
                 {
-                    case "1":
-                        RegisterNewUser(context.Users);
-                        break;
-                    case "2":
-                        AddNewProduct(context);
-                        break;
-                    case "3":
-                        exit = true;
-                        break;
-                    default:
-                        Console.WriteLine("Invalid option. Please try again.");
-                        break;
+                    case "1":RegisterNewUser(context.Users); break;
+                    case "2": AddNewProduct(context);break;
+                    case "3": PlaceAnOrder(context); break;
+                    case "4": exit = true; break;
+                    default: Console.WriteLine("Invalid option. Please try again."); break;
+
                 }
             }
         }

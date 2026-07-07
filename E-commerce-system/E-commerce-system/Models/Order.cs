@@ -39,6 +39,8 @@ namespace ECommerce_Solution.Models
         [MaxLength(50)]
         public string paymentMethod { get; set; }
 
+
+        //Relationship
         public User User { get; set; }// Navigation property 
         public ICollection<ProductOrder> ProductOrders { get; set; } 
 

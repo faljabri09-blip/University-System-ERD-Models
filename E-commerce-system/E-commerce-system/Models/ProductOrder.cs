@@ -30,8 +30,11 @@ namespace ECommerce_Solution.Models
         [Range(1, 999)] // Quantity should be between 1 and 999
         public int quantity { get; set; } // Quantity of the product in the order
 
+        [Required]
+        public decimal unitPrice { get; set; }
 
-       
-       
+
+
+
     }
 }
