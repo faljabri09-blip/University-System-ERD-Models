@@ -248,6 +248,8 @@ namespace ECommerce_Solution
 
         public static void FilterProductByCategoryAndPriceRange(E_ComerceContext context)
         {
+            Console.WriteLine("********** Filter Product By Category And Price Range **********");
+
             Console.WriteLine("Enter the category Id");
             int categoryId = int.Parse(Console.ReadLine());
 
