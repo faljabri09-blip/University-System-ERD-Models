@@ -9,7 +9,7 @@ namespace ECommerce_Solution
     {
         public static E_ComerceContext context = new E_ComerceContext();
         
-
+        //Add function
         public static void RegisterNewUser(DbSet<User> users)
         {
             Console.WriteLine("Registering a new user...");
@@ -189,6 +189,60 @@ namespace ECommerce_Solution
             Console.WriteLine($"Order placed successfully. Order Id: {newOrder.orderId}");
         }
 
+        public static void WriteProductRwview(E_ComerceContext context)
+        {
+
+            Console.WriteLine("Enter user Id");
+            int userId = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter product Id:");
+            int productId = int.Parse(Console.ReadLine());
+
+            var userfound = context.Users.FirstOrDefault(u => u.userId == userId && u.isActive == true);
+
+            var productfound = context.Products.FirstOrDefault(p => p.productId == productId
+                                                               && p.isAvailable == true);
+
+            if (userfound == null)
+            {
+                Console.WriteLine("user not found..");
+                return;
+            }
+
+            if (productfound == null)
+            {
+                Console.WriteLine("product not found");
+                return;
+            }
+
+
+            Console.WriteLine("Enter Rating review: (rating 1-5)");
+            int rating = int.Parse(Console.ReadLine());
+
+            if (rating < 1 || rating > 5)
+            {
+                Console.WriteLine("Rating must be between 1-5");
+            }
+
+            Console.WriteLine("Enter comment: (optional)");
+            string comment = Console.ReadLine();
+
+            Console.WriteLine("Enter review date:");
+            string reviewDate = Console.ReadLine();
+
+            var NewReview = new Review
+            {
+                userId = userId,
+                productId = productId,
+                rating = rating,
+                comment = string.IsNullOrWhiteSpace(comment) ? null : comment,
+                reviewDate = DateTime.Now
+            };
+
+            context.Reviews.Add(NewReview);
+            context.SaveChanges();
+            Console.WriteLine($"Adding Review successfully , review id: {NewReview.reviewId}");
+        }
         
         static void Main(string[] args)
         {
@@ -201,7 +255,8 @@ namespace ECommerce_Solution
                 Console.WriteLine("1. Register a new user");
                 Console.WriteLine("2. Add new product to a category");
                 Console.WriteLine("3. Place an order");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("4. Write a Product Review");
+                Console.WriteLine("5. Exit");
                 string option = Console.ReadLine();
 
                 switch (option)
@@ -209,7 +264,8 @@ namespace ECommerce_Solution
                     case "1":RegisterNewUser(context.Users); break;
                     case "2": AddNewProduct(context);break;
                     case "3": PlaceAnOrder(context); break;
-                    case "4": exit = true; break;
+                    case "4": WriteProductRwview(context); break;
+                    case "5": exit = true; break;
                     default: Console.WriteLine("Invalid option. Please try again."); break;
 
                 }
