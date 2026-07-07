@@ -316,6 +316,29 @@ namespace ECommerce_Solution
           
         }
 
+        //delete functions
+
+        public static void DeleteReview(DbSet<Review> reviews) { 
+            
+            Console.WriteLine("Enter Review id:"); 
+            int reviewId = int.Parse(Console.ReadLine()); 
+            
+            var reviewfound = context.Reviews.FirstOrDefault(r => r.reviewId == reviewId); 
+            
+            if (reviewfound == null) 
+            
+            { 
+                Console.WriteLine("Review not found...");
+                return ;
+            } 
+            
+            context.Reviews.Remove(reviewfound); 
+            context.SaveChanges(); 
+            Console.WriteLine("Review delete sucessfully...");
+        }
+
+
+
         static void Main(string[] args)
         {
             bool exit = false;
@@ -330,7 +353,8 @@ namespace ECommerce_Solution
                 Console.WriteLine("4. Write a Product Review");
                 Console.WriteLine("5. Update Product Price And Available ");
                 Console.WriteLine("6. Cancle an order ");
-                Console.WriteLine("7. Exit");
+                Console.WriteLine("7. Delete Review");
+                Console.WriteLine("12. Exit");
 
                 string option = Console.ReadLine();
 
@@ -342,7 +366,8 @@ namespace ECommerce_Solution
                     case "4": WriteProductRwview(context); break;
                     case "5":UpdateProductPriceAndAvailable(context.Products); break;
                     case "6": CancleOrder(context); break;
-                    case "8": exit = true; break;
+                    case "7": DeleteReview(context.Reviews); break;
+                    case "13": exit = true; break;
                     default: Console.WriteLine("Invalid option. Please try again."); break;
 
                 }

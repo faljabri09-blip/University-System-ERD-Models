@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Migrations\\20260707091906_CancleOrder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-commerce-system\\Migrations\\20260707091906_CancleOrder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Migrations\\20260707100809_DeleteReview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-commerce-system\\Migrations\\20260707100809_DeleteReview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\e-commerce-system\\e-commerce-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|solutionrelative:e-commerce-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\e-commerce-system\\e-commerce-system\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|solutionrelative:e-commerce-system\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{246B3C3F-D098-4134-ADB8-68CA4734B3A5}|E-commerce-system\\E-commerce-system.csproj|c:\\users\\fatma aljabri\\desktop\\karim back-end\\university-system-erd \u0026 models\\e-commerce-system\\e-commerce-system\\models\\productorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "E-commerce-system\\Program.cs",
               "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Program.cs",
               "RelativeToolTip": "E-commerce-system\\Program.cs",
-              "ViewState": "AgIAAPoAAAAAAAAAAAA1wBoBAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAF8BAAAAAAAAAAAwwHABAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-01T10:57:12.163Z",
               "IsPinned": true,
@@ -41,19 +45,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20260707091906_CancleOrder.cs",
-              "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Migrations\\20260707091906_CancleOrder.cs",
-              "RelativeDocumentMoniker": "E-commerce-system\\Migrations\\20260707091906_CancleOrder.cs",
-              "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Migrations\\20260707091906_CancleOrder.cs",
-              "RelativeToolTip": "E-commerce-system\\Migrations\\20260707091906_CancleOrder.cs",
+              "Title": "20260707100809_DeleteReview.cs",
+              "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Migrations\\20260707100809_DeleteReview.cs",
+              "RelativeDocumentMoniker": "E-commerce-system\\Migrations\\20260707100809_DeleteReview.cs",
+              "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Migrations\\20260707100809_DeleteReview.cs",
+              "RelativeToolTip": "E-commerce-system\\Migrations\\20260707100809_DeleteReview.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T09:19:06.967Z",
+              "WhenOpened": "2026-07-07T10:08:09.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "E-commerce-system\\Models\\Review.cs",
+              "ToolTip": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Models\\Review.cs",
+              "RelativeToolTip": "E-commerce-system\\Models\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T09:54:26.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProductOrder.cs",
               "DocumentMoniker": "C:\\Users\\Fatma ALjabri\\Desktop\\Karim Back-End\\University-System-ERD \u0026 Models\\E-commerce-system\\E-commerce-system\\Models\\ProductOrder.cs",
               "RelativeDocumentMoniker": "E-commerce-system\\Models\\ProductOrder.cs",
@@ -61,8 +77,7 @@
               "RelativeToolTip": "E-commerce-system\\Models\\ProductOrder.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAkwBMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T08:30:57.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T08:30:57.274Z"
             }
           ]
         }
