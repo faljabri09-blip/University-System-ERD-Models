@@ -43,6 +43,8 @@ namespace ECommerce_Solution.Models
 
         public bool isAvailable { get; set; } = true; //default value true
 
+
+        //Relationship
         public User User { get; set; } // Navigation property for related user
 
         public ICollection<ProductOrder> ProductOrders { get; set; }

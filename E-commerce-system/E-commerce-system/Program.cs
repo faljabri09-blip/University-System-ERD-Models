@@ -7,6 +7,7 @@ namespace ECommerce_Solution
     public class Program
     {
         public static E_ComerceContext context = new E_ComerceContext();
+        
 
         public static void RegisterNewUser(DbSet<User> users)
         {
@@ -32,7 +33,7 @@ namespace ECommerce_Solution
 
 
 
-            context.Users.Add(new User
+            User newUser = new User
 
             {
 
@@ -46,7 +47,7 @@ namespace ECommerce_Solution
                 address = string.IsNullOrWhiteSpace(address) ? null : address,
                 registrationDate = DateTime.Now,
                 isActive = true
-            });
+            };
 
 
             ////insert a new user with hardcoded values for testing purposes
@@ -61,14 +62,69 @@ namespace ECommerce_Solution
             //    isActive = true
             //};
 
-            //context.Users.Add(newUser);
+            context.Users.Add(newUser);
 
             context.SaveChanges(); // insert into user
 
-            //Console.WriteLine($"User registered successfully. UserId : {newUser.userId}");
+            Console.WriteLine($"User registered successfully. UserId : {newUser.userId}");
 
-            User saved = context.Users.OrderBy(u => u.userId).Last(); // generated id from database
-            Console.WriteLine($"User registered successfully. UserId : {saved.userId}");
+            //User saved = context.Users.OrderBy(u => u.userId).Last(); // generated id from database
+            //Console.WriteLine($"User registered successfully. UserId : {saved.userId}");
+        }
+
+        public static void AddNewProduct(DbSet<category> categories, DbSet<product> products)
+        {
+
+            //foreach (var category in context.Categories)
+            //{
+            //    Console.WriteLine($"{category.categoryId}  ---  {category.categoryName}");
+            //    return;
+            //}
+
+            Console.WriteLine("Choose Category Id :");
+            int categoryId = int.Parse(Console.ReadLine());
+
+            var categoryfound = context.Categories.FirstOrDefault(c => c.categoryId == categoryId);
+
+            if (categoryfound == null)
+            {
+                Console.WriteLine("Category not found...");
+                return;
+            }
+
+
+            Console.WriteLine("Enter Product Name :");
+            string productName = Console.ReadLine();
+
+            Console.WriteLine("Enter Description (optional):");
+            string description = Console.ReadLine();
+
+
+            Console.WriteLine("Enter Product Price");
+            decimal ProductPrice = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter stock Quantity");
+            int stockQuantity = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter image Url (optional)");
+            string imageUrl = Console.ReadLine();
+
+            var NewProduct = new product
+            {
+                productName = productName,
+                description = string.IsNullOrWhiteSpace(description) ? null : description,
+                ProductPrice = ProductPrice,
+                stockQuantity = stockQuantity,
+                imageUrl = string.IsNullOrWhiteSpace(imageUrl) ? null : imageUrl,
+                categoryId = categoryId,
+                createAt = DateTime.Now,
+                isAvailable = true
+            };
+
+            context.Products.Add(NewProduct);
+            context.SaveChanges();
+            Console.WriteLine($"Product add sucessfully , Product Id : {NewProduct.productId}");
+
         }
 
         
@@ -81,7 +137,7 @@ namespace ECommerce_Solution
                 Console.WriteLine("Welcome to the E-commerce system!");
                 Console.WriteLine("Please select an option:");
                 Console.WriteLine("1. Register a new user");
-                Console.WriteLine("2. ");
+                Console.WriteLine("2. Add new product to a category");
                 Console.WriteLine("3. Exit");
                 string option = Console.ReadLine();
 
