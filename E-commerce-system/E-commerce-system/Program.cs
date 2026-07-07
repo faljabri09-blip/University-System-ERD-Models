@@ -9,7 +9,7 @@ namespace ECommerce_Solution
     {
         public static E_ComerceContext context = new E_ComerceContext();
         
-        //Add function
+        //Add functions
         public static void RegisterNewUser(DbSet<User> users)
         {
             Console.WriteLine("Registering a new user...");
@@ -243,6 +243,39 @@ namespace ECommerce_Solution
             context.SaveChanges();
             Console.WriteLine($"Adding Review successfully , review id: {NewReview.reviewId}");
         }
+
+
+        //update functions
+        public static void UpdateProductPriceAndAvailable(DbSet<product> products)
+        {
+
+            Console.WriteLine("Enter product Id:");
+            int productId = int.Parse(Console.ReadLine());
+
+            product product = context.Products.FirstOrDefault(p => p.productId == productId);
+
+            if (product == null)
+            {
+                Console.WriteLine("product not found...");
+                return;
+            }
+
+
+            Console.WriteLine("Enter product price");
+            decimal price = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enetr available product");
+            bool available = bool.Parse(Console.ReadLine());
+            
+                product.ProductPrice  = price;
+                product.isAvailable = available;
+                
+
+            context.SaveChanges();
+            Console.WriteLine($"Update sucessfully, product id : {productId}");
+
+
+         }
         
         static void Main(string[] args)
         {
@@ -256,7 +289,9 @@ namespace ECommerce_Solution
                 Console.WriteLine("2. Add new product to a category");
                 Console.WriteLine("3. Place an order");
                 Console.WriteLine("4. Write a Product Review");
+                Console.WriteLine("4. Update Product Price And Available ");
                 Console.WriteLine("5. Exit");
+
                 string option = Console.ReadLine();
 
                 switch (option)
@@ -265,7 +300,8 @@ namespace ECommerce_Solution
                     case "2": AddNewProduct(context);break;
                     case "3": PlaceAnOrder(context); break;
                     case "4": WriteProductRwview(context); break;
-                    case "5": exit = true; break;
+                    case "5":UpdateProductPriceAndAvailable(context.Products); break;
+                    case "6": exit = true; break;
                     default: Console.WriteLine("Invalid option. Please try again."); break;
 
                 }
