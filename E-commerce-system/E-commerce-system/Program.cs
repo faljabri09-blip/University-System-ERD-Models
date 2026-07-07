@@ -10,8 +10,8 @@ namespace ECommerce_Solution
     public class Program
     {
         public static E_ComerceContext context = new E_ComerceContext();
-        
-        //Add functions
+
+        //Add operations
         public static void RegisterNewUser(DbSet<User> users)
         {
             Console.WriteLine("Registering a new user...");
@@ -246,9 +246,32 @@ namespace ECommerce_Solution
             Console.WriteLine($"Adding Review successfully , review id: {NewReview.reviewId}");
         }
 
+        public static void FilterProductByCategoryAndPriceRange(E_ComerceContext context)
+        {
+            Console.WriteLine("Enter the category Id");
+            int categoryId = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the Maximum price :");
+            int maxPrice = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the Manimum price :");
+            int minPrice = int.Parse(Console.ReadLine());
+
+            var Price = context.Products.OrderBy(p => p.ProductPrice)
+                                        .Where(p => p.categoryId == categoryId
+                                                      && p.ProductPrice >= minPrice
+                                                      && p.ProductPrice <= maxPrice).ToList();
+            if (categoryId == 0 && Price.Count <= 0)
+            {
+                Console.WriteLine("Product not found..");
+            }
+
+            Console.WriteLine($"CategoryId: {categoryId} | Maximum price :{maxPrice} | Manimum price :{minPrice}");
 
 
-        //update functions
+        }
+
+        //Update operations
         public static void UpdateProductPriceAndAvailable(DbSet<product> products)
         {
 
@@ -316,7 +339,7 @@ namespace ECommerce_Solution
           
         }
 
-        //delete functions
+        //Delete operations
 
         public static void DeleteReview(DbSet<Review> reviews) { 
             
@@ -337,8 +360,21 @@ namespace ECommerce_Solution
             Console.WriteLine("Review delete sucessfully...");
         }
 
+        //Get operations
 
+        public static void ViewAllProducts(DbSet<product> products)
+        {
+            Console.WriteLine("****** View All Products *********");
 
+            foreach (var product in context.Products) 
+            {
+                Console.WriteLine($"Product name: {product.productName} | Product Price: {product.ProductPrice} | " +
+                    $"Product stock {product.stockQuantity} | Available status : {product.isAvailable}");
+            }
+
+        }
+
+       
         static void Main(string[] args)
         {
             bool exit = false;
@@ -354,20 +390,25 @@ namespace ECommerce_Solution
                 Console.WriteLine("5. Update Product Price And Available ");
                 Console.WriteLine("6. Cancle an order ");
                 Console.WriteLine("7. Delete Review");
+                Console.WriteLine("8. View All Products");
+                Console.WriteLine("9. Filter product by category and price range");
                 Console.WriteLine("12. Exit");
 
-                string option = Console.ReadLine();
+                Console.WriteLine("Choose the option:");
+                int option = int.Parse(Console.ReadLine());
 
                 switch (option)
                 {
-                    case "1":RegisterNewUser(context.Users); break;
-                    case "2": AddNewProduct(context);break;
-                    case "3": PlaceAnOrder(context); break;
-                    case "4": WriteProductRwview(context); break;
-                    case "5":UpdateProductPriceAndAvailable(context.Products); break;
-                    case "6": CancleOrder(context); break;
-                    case "7": DeleteReview(context.Reviews); break;
-                    case "13": exit = true; break;
+                    case 1 :RegisterNewUser(context.Users); break;
+                    case 2: AddNewProduct(context);break;
+                    case 3: PlaceAnOrder(context); break;
+                    case 4: WriteProductRwview(context); break;
+                    case 5:UpdateProductPriceAndAvailable(context.Products); break;
+                    case 6: CancleOrder(context); break;
+                    case 7: DeleteReview(context.Reviews); break;
+                    case 8: ViewAllProducts(context.Products); break;
+                    case 9: ViewAllProducts(context.Products); break;
+                    case 13: exit = true; break;
                     default: Console.WriteLine("Invalid option. Please try again."); break;
 
                 }
