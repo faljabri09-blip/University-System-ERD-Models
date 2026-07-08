@@ -421,7 +421,48 @@ namespace ECommerce_Solution
                 }
             }
 
-        }   
+        }
+
+        public static void ViewOrderHistoryWithFullDetails(E_ComerceContext context)
+        {
+
+            Console.WriteLine("******** View Order History With Full Details ******");
+
+
+            Console.WriteLine("Enter user Id:");
+            int userId = int.Parse(Console.ReadLine());
+
+            var user = context.Users.Include(o => o.Orders)
+                                          .ThenInclude(r => r.ProductOrders)
+                                          .ThenInclude(p => p.product)
+                                          .FirstOrDefault(us => us.userId == userId);
+
+            if (user == null)
+            {
+                Console.WriteLine("User not found...");
+                return;
+            }
+
+            if (!user.Orders.Any())
+            {
+                Console.WriteLine("No order found...");
+            }
+
+            foreach (var order in user.Orders)
+            {
+                Console.WriteLine($"Order ID : {order.orderId}");
+                Console.WriteLine($"Date : {order.orderDate}");
+                Console.WriteLine($"Status : {order.status}");
+                Console.WriteLine($"Total : {order.totalAmount}");
+
+
+                foreach (var item in order.ProductOrders)
+                {
+                    Console.WriteLine($"productName : {item.product.productName}");
+                    Console.WriteLine($"Unit Price : {item.unitPrice}");
+                }
+            }
+        }
 
 
         static void Main(string[] args)
@@ -442,6 +483,7 @@ namespace ECommerce_Solution
                 Console.WriteLine("8. View All Products");
                 Console.WriteLine("9. Filter product by category and price range");
                 Console.WriteLine("10. Get Category with All Its products");
+                Console.WriteLine("11. View order history with full details");
                 Console.WriteLine("12. Exit");
 
                 Console.WriteLine("Choose the option:");
@@ -459,8 +501,8 @@ namespace ECommerce_Solution
                     case 8: ViewAllProducts(context.Products); break;
                     case 9: FilterProductByCategoryAndPriceRange(context); break;
                     case 10: GetCategoryWithAllItsproducts(context); break;
-                    case 11: ; break;
-                    case 12: ; break;
+                    case 11: ViewOrderHistoryWithFullDetails(context) ; break;
+                    case 12: ViewOrderHistoryWithFullDetails (context); break;
                     case 13: exit = true; break;
                     default: Console.WriteLine("Invalid option. Please try again."); break;
 
