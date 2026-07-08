@@ -382,6 +382,47 @@ namespace ECommerce_Solution
 
         }
 
+        public static void GetCategoryWithAllItsproducts(E_ComerceContext context)
+        {
+            Console.WriteLine("************* Get Category With All Its products *************");
+
+            Console.WriteLine("Enter catogry id:");
+            int catogeryId = int.Parse(Console.ReadLine());
+
+
+            var category = context.Categories.Include(c => c.Products)
+                                             .FirstOrDefault(c => c.categoryId == catogeryId);
+
+
+            if (category == null)
+            {
+                Console.WriteLine("Category not found....");
+                return;
+            }
+
+            Console.WriteLine($"Category id: {category.categoryId}");
+            Console.WriteLine($"Category name: {category.categoryName}");
+            Console.WriteLine($"Category Description: {category.description}");
+
+            if (!category.Products.Any())
+            {
+                Console.WriteLine("No product found in category..");
+            }
+
+            else
+            {
+                foreach (var product in category.Products)
+
+                {
+                    Console.WriteLine($"Category id: {category.categoryId}");
+                    Console.WriteLine($"Category name: {category.categoryName}");
+                    Console.WriteLine($"Category Description: {category.description}");
+                    Console.WriteLine($"Category image Url: {category.imageUrl}");
+                }
+            }
+
+        }   
+
 
         static void Main(string[] args)
         {
@@ -400,6 +441,7 @@ namespace ECommerce_Solution
                 Console.WriteLine("7. Delete Review");
                 Console.WriteLine("8. View All Products");
                 Console.WriteLine("9. Filter product by category and price range");
+                Console.WriteLine("10. Get Category with All Its products");
                 Console.WriteLine("12. Exit");
 
                 Console.WriteLine("Choose the option:");
@@ -416,6 +458,9 @@ namespace ECommerce_Solution
                     case 7: DeleteReview(context.Reviews); break;
                     case 8: ViewAllProducts(context.Products); break;
                     case 9: FilterProductByCategoryAndPriceRange(context); break;
+                    case 10: GetCategoryWithAllItsproducts(context); break;
+                    case 11: ; break;
+                    case 12: ; break;
                     case 13: exit = true; break;
                     default: Console.WriteLine("Invalid option. Please try again."); break;
 
