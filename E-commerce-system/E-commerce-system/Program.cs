@@ -464,6 +464,56 @@ namespace ECommerce_Solution
             }
         }
 
+        public static void ProductSummaryReport(E_ComerceContext context)
+        {
+
+            Console.WriteLine("********** Product Summary Report **********");
+
+            //Part A:
+            var report = context.Products.Select(p => new
+            {
+                productName = p.productName,
+                categoryName = p.category.categoryName,
+                reviewCount = p.Reviews.Count(),
+                AvgRation = p.Reviews.Average(r => r.rating),
+                currentStock = p.stockQuantity
+            }).ToList();
+
+            if (!report.Any())
+            {
+                Console.WriteLine("Details not found...");
+                return;
+            }
+
+            foreach (var products in report)
+            {
+                Console.WriteLine($"Product Neme  : {products.productName} " );
+                Console.WriteLine($"Category Name : {products.categoryName} ");
+                Console.WriteLine($"Review Count  : {products.reviewCount} ");
+                Console.WriteLine($"Average Ration  : {products.AvgRation} ");
+                Console.WriteLine($"Current Stock  : {products.currentStock} ");
+            }
+
+
+            //Part B:
+
+            Console.WriteLine($"Enter Product Id :");
+            int productId = int.Parse( Console.ReadLine());
+
+            var product = context.Products.FirstOrDefault(p => p.productId == productId);
+
+            if (product == null)
+            {
+                Console.WriteLine($"Product not found....");
+                return;
+            }
+
+            foreach(var review in product.Reviews)
+            {
+                Console.WriteLine($"Review comment  :  {review.comment}");
+            }
+        }
+
 
         static void Main(string[] args)
         {
@@ -484,7 +534,8 @@ namespace ECommerce_Solution
                 Console.WriteLine("9. Filter product by category and price range");
                 Console.WriteLine("10. Get Category with All Its products");
                 Console.WriteLine("11. View order history with full details");
-                Console.WriteLine("12. Exit");
+                Console.WriteLine("12. Product Summary Report");
+                Console.WriteLine("13. Exit");
 
                 Console.WriteLine("Choose the option:");
                 int option = int.Parse(Console.ReadLine());
@@ -502,7 +553,7 @@ namespace ECommerce_Solution
                     case 9: FilterProductByCategoryAndPriceRange(context); break;
                     case 10: GetCategoryWithAllItsproducts(context); break;
                     case 11: ViewOrderHistoryWithFullDetails(context) ; break;
-                    case 12: ViewOrderHistoryWithFullDetails (context); break;
+                    case 12: ProductSummaryReport(context); break;
                     case 13: exit = true; break;
                     default: Console.WriteLine("Invalid option. Please try again."); break;
 
